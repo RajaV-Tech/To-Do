@@ -9,7 +9,7 @@ const path = require('path');
 
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Allow React frontend
+    origin: 'http://raja-tech.free.nf', // Allow React frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 };
