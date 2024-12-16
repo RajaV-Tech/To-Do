@@ -7,7 +7,15 @@ const app = express();
 const fs = require('fs'); 
 const path = require('path');
 
-app.use(cors());
+
+const corsOptions = {
+    origin: 'http://localhost:3000', // Allow React frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyparser.json());
 
 const caPath = path.resolve(__dirname, './isrgrootx1.pem');
